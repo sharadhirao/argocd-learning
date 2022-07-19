@@ -11,12 +11,12 @@ input = {
 
 default allow = false
 
-# allow {                         # Allow is true IF
-#    input.sonarqube == "APPORVED"      
-#    input.blackduck == "APPORVED"        
-#    input.coverity == "APPORVED" 
-#    input.QGtest == "APPORVED"
-# }
+ allow {                         # Allow is true IF
+    input.sonarqube == "APPORVED"      
+    input.blackduck == "APPORVED"        
+    input.coverity == "APPORVED" 
+    input.QGtest == "APPORVED"
+ }
 
 allow = true {                  # Allow is true IF
    blackduck := "APPORVED"         # postMethod variable is succesfully assigned string value "POST" AND
