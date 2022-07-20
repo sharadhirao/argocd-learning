@@ -1,0 +1,6 @@
+{
+    "sonarqube": "APPORVED",
+    "blackduck": "APPORVED",
+    "coverity": "APPORVED",
+    "QGtest": "APPORVED"
+}
