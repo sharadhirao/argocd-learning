@@ -1,7 +1,7 @@
 {
   "project_name": "gto-scrt-ui-qa",
   "distribute_images": "yes",
-  "email": "alhamada.mohamad@broadcom.com",
+  "email": "email",
   "version": "1.0",
   "entrypoint": "helm",
   "kubernetes": {
