@@ -1,7 +1,12 @@
-# Program to generate a random number between 0 and 9
+import yaml
+import json
 
-# importing the random module
-import random
+with open('/mnt/vol/build-info.yaml', 'r') as file:
+    configuration = yaml.safe_load(file)
 
-print(random.randint(0,9))
-print(random.randint(0,9))
+with open('/mnt/vol/config.json', 'w') as json_file:
+    json.dump(configuration, json_file)
+    
+output = json.dumps(json.load(open('config.json')), indent=2)
+print(output)
+
