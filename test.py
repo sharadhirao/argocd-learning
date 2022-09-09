@@ -7,6 +7,6 @@ with open('/mnt/vol/build-info.yaml', 'r') as file:
 with open('/mnt/vol/config.json', 'w') as json_file:
     json.dump(configuration, json_file)
     
-output = json.dumps(json.load(open('config.json')), indent=2)
+output = json.dumps(json.load(open('/mnt/vol/config.json')), indent=2)
 print(output)
 
