@@ -1,6 +1,6 @@
 {
-    "sonarqube": "APPORVED",
-    "blackduck": "APPORVED",
-    "coverity": "APPORVED",
-    "QGtest": "APPORVED"
+    "sonarQG": "PASSED",
+    "blackduckQG": "SKIPPED",
+    "coverityQG": "SKIPPED",
+    "environment": "dev"
 }
