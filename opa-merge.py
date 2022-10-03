@@ -1,7 +1,7 @@
 import json
 
 file_name = open('/mnt/vol/rego-org-proj-policy.json')
-data = json.load(file_name)
+data = json.load(file_name.read())
 
 input_file_name = open('/mnt/vol/input.json')
 input_data = json.load(input_file_name.read())
