@@ -1,8 +1,0 @@
-repo: "repo-name"
-chart: mychart/mychart-0.1.0.tgz
-values: ./values.yaml
-command: upgrade
-commandOptions: --install --debug
-releaseName: dev
-images:
-  helloworld: hello
