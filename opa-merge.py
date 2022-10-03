@@ -1,10 +1,10 @@
 import json
 
 file_name = open('/mnt/vol/rego-org-proj-policy.json')
-data = json.load(file_name.read())
+data = json.dumps(json.load(open('/mnt/vol/rego-org-proj-policy.json')), indent=2)
 
 input_file_name = open('/mnt/vol/input.json')
-input_data = json.load(input_file_name.read())
+input_data = json.dumps(json.load(open('/mnt/vol/input.json')), indent=2)
 environment = input_data["environment"]
 
 proj_level = data["proj_rbac"]["allow"]
