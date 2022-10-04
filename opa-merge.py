@@ -1,8 +1,20 @@
 import json
 
+import json
+
+with open('/mnt/vol/rego-org-proj-policy.txt') as f:
+    contents = f.read()
+
+json_object = json.loads(contents)
+with open('/mnt/vol/rego-org-proj-policy.json', 'w') as json_file:    
+    json.dump(json_object, json_file)
+
 file_name = open('/mnt/vol/rego-org-proj-policy.json')
 data = json.loads(file_name.read())
 print(data)
+# file_name = open('/mnt/vol/rego-org-proj-policy.json')
+# data = json.loads(file_name.read())
+# print(data)
 # input_file_name = open('/mnt/vol/input.json')
 # input_data = json.loads(input_file_name .read())
 # print(input_data)
