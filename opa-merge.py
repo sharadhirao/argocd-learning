@@ -4,8 +4,10 @@ import json
 
 with open('/mnt/vol/rego-org-proj-policy.txt') as f:
     contents = f.read()
+print("contents: ", contents)
 
 json_object = json.loads(contents)
+print("json: ", json_object)
 with open('/mnt/vol/rego-org-proj-policy.json', 'w') as json_file:    
     json.dump(json_object, json_file)
 
