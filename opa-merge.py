@@ -1,5 +1,5 @@
 import json
-import ast
+import re
 
 # open opa result file and load to variable
 file_name = open('/mnt/vol/rego-org-proj-policy.json')
