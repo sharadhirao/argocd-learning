@@ -6,14 +6,9 @@ with open('/mnt/vol/rego-org-proj-policy.txt') as f:
     contents = f.read()
 print("contents: ", contents)
 
-json_object = json.loads(contents)
-print("json: ", json_object)
-with open('/mnt/vol/rego-org-proj-policy.json', 'w') as json_file:    
-    json.dump(json_object, json_file)
+res = json.loads(contents)
+print(type(res), res)
 
-file_name = open('/mnt/vol/rego-org-proj-policy.json')
-data = json.loads(file_name.read())
-print(data)
 # file_name = open('/mnt/vol/rego-org-proj-policy.json')
 # data = json.loads(file_name.read())
 # print(data)
