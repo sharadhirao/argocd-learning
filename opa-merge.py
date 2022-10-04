@@ -2,10 +2,9 @@ import json
 import ast
 
 # open opa result file and load to variable
-file_name = open('test.json','r')
-# json_data = ast.literal_eval(json.dumps(file_name))
+file_name = open('/mnt/vol/rego-org-proj-policy.json')
+json_data = file_name.read()
+print(json_data)
 
+print( re.sub("(\w+):", r'"\1":',  json_data) )
 
-data = json.loads(file_name.read())
-print(data)
-# proj_level = data["proj_rbac"]["allow"]
