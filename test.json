@@ -1,5 +1,8 @@
 {
-  "result" : true,
-  "grade" : null,
-  "rollno" : 210
+  "org_rbac": {
+    "allow": false
+  },
+  "proj_rbac": {
+    "allow": true
+  }
 }
