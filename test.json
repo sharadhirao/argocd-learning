@@ -1,8 +1,1 @@
-{
-  "org_rbac": {
-    "allow": false
-  },
-  "proj_rbac": {
-    "allow": true
-  }
-}
+{"org_rbac":{"allow":false},"proj_rbac":{"allow":true}}
