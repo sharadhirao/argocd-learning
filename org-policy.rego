@@ -1,20 +1,20 @@
 package org_rbac
 
-default allow = "False"
+default allow = false
 
-allow = "True" {                 
+allow = true {                 
    input.environment == "verify"
    input.sonarqube == "APPROVED"  
    input.blackduck == "APPROVED"
    input.coverity == "APPROVED" # input.resource equals "resource"
 } 
-allow = "True" {
+allow = true {
     input.environment == "prod"
     input.sonarqube == "APPROVED"
     input.coverity == "APPROVED"
     input.blackduck == "APPROVED"
 }
-allow = "True" {                  
+allow = true {                  
    input.environment == "dev"
    input.sonarqube == "APPROVED"  
    input.blackduck == "APPROVED"
