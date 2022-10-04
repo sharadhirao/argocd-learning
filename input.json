@@ -1,5 +1,5 @@
 {
-    "environment":"dev",
+    "environment":"prod",
     "sonarqube": "APPROVED",
     "blackduck": "SKIPPED",
     "coverity": "SKIPPED"
