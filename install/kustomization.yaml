@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ./argo-workflows.yaml
+- ./argocd.yaml
+- ./argo-events.yaml
+
+
+# kustomize build ./install | kubectl apply --filename -

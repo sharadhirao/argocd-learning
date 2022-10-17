@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+  labels:
+    project_name: argo-components  
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: argo-components
+  source:
+    path: charts/argo-cd
+    repoURL: https://github.com/argoproj/argo-helm.git
+    targetRevision: HEAD
+    helm:
+      values: |
+        server: 
+          certificate:
+            domain: argo-cd-dev-lvn-01.lvn.broadcom.net
+            additionalHosts: argo-cd-dev-lvn-01.lvn.broadcom.net
+          service:
+            type: LoadBalancer
+            loadBalancerIP: 172.30.136.250
+          config:
+            accounts.admin: apiKey, login
+            accounts.testbip: login          
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
+
+# secret 
