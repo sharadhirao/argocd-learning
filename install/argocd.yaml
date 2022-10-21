@@ -15,13 +15,6 @@ spec:
     targetRevision: HEAD
     helm:
       values: |
-        server: 
-          certificate:
-            domain: argo-cd-dev-lvn-01.lvn.broadcom.net
-            additionalHosts: argo-cd-dev-lvn-01.lvn.broadcom.net
-          service:
-            type: LoadBalancer
-            loadBalancerIP: 172.30.136.250
           config:
             accounts.admin: apiKey, login
             accounts.testbip: login          
